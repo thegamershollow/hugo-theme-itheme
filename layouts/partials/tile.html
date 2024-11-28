@@ -34,9 +34,13 @@
     </div>
 
     <div class="tile__description" aria-hidden="true">
+    <div>
       <div class="tile__head">
         <div class="tile__headline">{{ .context.Title }}</div>
       </div>
+      <div class="title__summary">{{ .context.Description }}</div>
+    </div>
+    <div>
       <div class="tile__timestamp icon-hide icon icon-before icon-clock">{{ .context.Date | time.Format ":date_long" }}</div>
       <div class="tile__category">
           {{ if .context.Params.tags }}
@@ -44,6 +48,7 @@
               {{.}}
             {{ end }}
           {{ end }}
+            </div>
         </div>
     </div>
   </a>
