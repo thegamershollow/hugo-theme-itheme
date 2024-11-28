@@ -10,13 +10,6 @@
               <div class="component-content">
                 <div class="category-eyebrow">
                   <span class="category-eyebrow__date">{{ .Page.Params.Date | time.Format ":date_long"}}</span>
-                  <span class="category-eyebrow__category category_original">
-                    {{ if .Page.Params.tags }}
-                      {{ range first 1 .Page.Params.tags }}
-                        {{.}}
-                      {{ end }}
-                    {{ end }}
-                  </span>
                 </div>
               </div>
             </div>
@@ -25,8 +18,6 @@
                 <h1 class="hero-headline">{{ .Title }}</h1>
               </div>
             </div>
-            <div class="component {{ if $featured }} featured-subhead {{ else }} article-subhead {{ end }}">
-              <div class="component-content">{{ .Page.Params.description }}</div>
             </div>
 
             <div class="tagssheet component">
@@ -64,9 +55,6 @@
           <div class="component">
             <div class="component-content">
               <div class="article-copyright">
-                <p class="content">
-                  {{ i18n "copyright" }}: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank">{{ i18n "licenses" }}</a>
-                </p>
                 <p class="content">{{ i18n "author"}}:  {{ .Page.Params.author }} </p>
                 <p class="content">{{ i18n "postDate"}}:  {{ .Page.Params.Date | time.Format ":date_long" }}</p>
               </div>

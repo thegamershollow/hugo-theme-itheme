@@ -6,7 +6,7 @@
       <ul role="list" class="section-tiles">
         {{ range first 1 $pages }}
           {{ $level := 1 }}
-          {{ partial "tile.html" (dict "context" . "level" $level) }}
+          {{ partial "mainpost.html" (dict "context" . "level" $level) }}
         {{ end }}
 
         {{ range first 4 ( after 1 $pages) }}
