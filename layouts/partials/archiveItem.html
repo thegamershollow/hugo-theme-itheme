@@ -12,16 +12,18 @@
         <img class="viewport-image" src="{{ $cover }}" srcset="{{ $cover }}" aria-hidden="true" alt="">
     </picture>
     <div class="item__content">
-        <p class="item__category category_update">
-            {{ if .context.Params.tags }}
-                {{ range first 1 .context.Params.tags }}
-                {{.}}
-                {{ end }}
-            {{ end }}
-        </p>
+        
         <h3 class="item__headline">
             {{ .context.Title }}
         </h3>
             <p class="item__date">{{ .context.Date | time.Format ":date_long"  }}</p>
+            <p class="item__category category_update">
+                {{ if .context.Params.tags }}
+                    {{ range first 1 .context.Params.tags }}
+                    {{.}}
+                    {{ end }}
+                {{ end }}
+            </p>
     </div>
+
 </a>
