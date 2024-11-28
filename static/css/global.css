@@ -5368,7 +5368,6 @@ html.no-touch.no-reduced-motion .tile.tile-list[data-focus-method=key] .media--v
 .component::before,
 .component::after {
   content: ' ';
-  display: table
 }
 
 .component::after {
