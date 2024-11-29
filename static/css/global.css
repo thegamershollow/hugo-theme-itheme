@@ -494,6 +494,11 @@ a.nav-title:hover {
   overflow: hidden
 }
 
+.tile__summary {
+  color: #1d1d1f;
+  font-size: small;
+}
+
 @media (hover: hover) {
   .tile:hover {
     text-decoration: none
